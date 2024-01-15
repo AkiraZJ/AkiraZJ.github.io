@@ -27,7 +27,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="http://example.com/images/kotVar_1.png">
 <meta property="article:published_time" content="2023-11-22T07:42:56.000Z">
-<meta property="article:modified_time" content="2023-12-18T01:39:41.814Z">
+<meta property="article:modified_time" content="2023-12-27T01:39:14.873Z">
 <meta property="article:author" content="John Zhang">
 <meta property="article:tag" content="Kotlin">
 <meta name="twitter:card" content="summary_large_image">
@@ -260,7 +260,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k words
+          1.6k words
         
       </span>
     
@@ -271,7 +271,7 @@
         
         
         
-          10 mins
+          14 mins
         
       </span>
     
@@ -356,7 +356,9 @@
 </blockquote>
 <p>函数参数总是只读的，即无法在函数体内再给他们进行赋值</p>
 <p>反引号：kotlin里，可以使用反引号给函数命名，反引号内可以包含任意字符，包括空格。</p>
-<h4 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h4><p>匿名函数：即lambda表达式，返回结果称为lambda结果</p>
+<h4 id="匿名函数"><a href="#匿名函数" class="headerlink" title="匿名函数"></a>匿名函数</h4><p>例：<br>val numLetters = “Mississippi”.count({ letter -&gt;<br>    letter == ‘s’<br>})</p>
+<p>又如：<br>val greetingFunction: () -&gt; String = {<br>    val currentYear = 2023<br>    “Welcome to Kotlin $currentYear!”<br>}<br>定义变量时，是在变量名后面跟上冒号和类型，对编译器来说，:Int 表示变量存储的是数据，:() -&gt; String 表示变量存储的是那种类型的函数。</p>
+<p>匿名函数：即lambda表达式，返回结果称为lambda结果</p>
 <blockquote>
 <p>{参数名: 参数类型 -&gt; 函数体}</p>
 </blockquote>
@@ -374,6 +376,12 @@
 <li>Set集合里所有元素都具有唯一性</li>
 <li>Set集合不支持基于索引的存取值函数</li>
 </ul>
+<p>可以联合使用toList()和toSet()函数，将list转为不含重复元素的list。如：</p>
+<p>val patrons = listOf(“Eli Baggins”, “Eli  Baggins”, “Eli Ironfoot”).toSet().toList()</p>
+<p>由于.toSet().toList()很常见，孤儿Kotlin封装了这个，成为.distinct()</p>
+<p>val patrons = listOf(“Eli Baggins”, “Eli  Baggins”, “Eli Ironfoot”).distinct()</p>
+<h2 id="map"><a href="#map" class="headerlink" title="map"></a>map</h2><p>map里，键必须是同一类型，值也必须是同一类型。但键和值可以是不同类型</p>
+<p>to是一个省略了点号和圆括号的特殊函数，to函数将它左边和右边的值转换成一个对</p>
 
                 
               </div>
@@ -463,6 +471,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2023/12/21/JapaneseWords/" title="JapaneseWords">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">JapaneseWords</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
